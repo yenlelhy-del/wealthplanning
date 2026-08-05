@@ -1,0 +1,434 @@
+<!DOCTYPE html><html class="light" lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Thu Nhập &amp; Chi Tiêu - FinPeace</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e6e8ee",
+                        "background": "#f7f9ff",
+                        "primary-fixed": "#77fca3",
+                        "tertiary-fixed-dim": "#ffb2b9",
+                        "surface-bright": "#f7f9ff",
+                        "outline": "#6d7b6e",
+                        "on-background": "#181c20",
+                        "secondary-fixed": "#a8f3c3",
+                        "inverse-on-surface": "#eff1f7",
+                        "secondary-fixed-dim": "#8dd6a8",
+                        "on-primary-fixed-variant": "#005228",
+                        "on-primary-container": "#003317",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f7f9ff",
+                        "on-surface": "#181c20",
+                        "on-secondary-fixed": "#002110",
+                        "primary-container": "#00a859",
+                        "tertiary": "#a93249",
+                        "tertiary-container": "#ed657a",
+                        "on-surface-variant": "#3d4a3f",
+                        "on-secondary-container": "#28714b",
+                        "secondary-container": "#a8f3c3",
+                        "outline-variant": "#bccabc",
+                        "primary": "#006d38",
+                        "on-primary-fixed": "#00210d",
+                        "surface-container": "#eceef4",
+                        "inverse-primary": "#59df89",
+                        "tertiary-fixed": "#ffdadc",
+                        "surface-container-low": "#f2f3f9",
+                        "surface-container-highest": "#e0e2e8",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d8dae0",
+                        "primary-fixed-dim": "#59df89",
+                        "error": "#ba1a1a",
+                        "secondary": "#216b45",
+                        "surface-variant": "#e0e2e8",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#5d001b",
+                        "inverse-surface": "#2d3135",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#400010",
+                        "surface-tint": "#006d38",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#005230",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#891833"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max-width": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .emerald-glow:focus-within { box-shadow: 0 0 0 3px rgba(0, 109, 56, 0.1); }
+        input[type="range"] { -webkit-appearance: none; }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #006d38;
+            cursor: pointer;
+            box-shadow: 0 0 0 4px rgba(0, 109, 56, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest border-b border-outline-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full z-50 fixed top-0 left-0">
+<div class="flex items-center">
+<img alt="FinPeace Logo" class="h-8 md:h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuq86GNv7gfEMfGTbavvtQBvO6Ox4iEMptGkeGa7-j1Mx3wUSQj-xvxE3_1UM4R8bm_OGTL9y-2iBWLTErH32PWCzFRhVVnagbgoiOUiDzOSZUxK1Kl7k0765d4HIVpuP11mANNk7LYR-lsgcRrDiMWNGFUYhM3PpQsdNcKwiKmOpX27o5lk3cuJWgnSD8yf8ih8nn4nBKzcZNC0oRLjzRW9r0fEA4R6rxcY1_45hn0SZW4wZ0QvE3lGDiQIzK55RqolWFsd-BJT8U">
+</div>
+<div class="hidden lg:flex gap-10">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors px-1" href="#"><b><u>Đang thực hiện&nbsp;&nbsp;</u></b></a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors px-1" href="#">Báo cáo&nbsp;</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors px-1" href="#">Thư viện&nbsp;</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full font-label-md text-label-md hover:brightness-95 active:scale-95 transition-all">Lưu &amp; Thoát</button>
+<span class="material-symbols-outlined text-primary text-3xl cursor-pointer">account_circle</span>
+</div>
+</header>
+<!-- Smart Progress Bar -->
+<div class="fixed top-20 left-0 right-0 z-40 bg-surface-container-lowest border-b border-outline-variant overflow-x-auto no-scrollbar">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-5">
+<div class="flex items-center justify-between min-w-[700px] gap-2">
+<!-- Step 1 -->
+<div class="flex-1 flex flex-col items-center gap-2 relative">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<span class="text-label-md font-medium text-primary">Khởi đầu</span>
+<div class="absolute top-4 left-1/2 w-full h-[2px] bg-primary -z-0"></div>
+</div>
+<!-- Step 2 (Active) -->
+<div class="flex-1 flex flex-col items-center gap-2 relative">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center z-10 ring-4 ring-primary/20">
+<span class="font-bold text-sm">2</span>
+</div>
+<span class="text-label-md font-bold text-primary">Thu nhập &amp; Chi tiêu</span>
+<div class="absolute top-4 left-1/2 w-full h-[2px] bg-outline-variant -z-0"></div>
+</div>
+<!-- Step 3-6 (Inactive) -->
+<div class="flex-1 flex flex-col items-center gap-2 relative">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center z-10 border border-outline-variant">
+<span class="text-sm">3</span>
+</div>
+<span class="text-label-md font-medium text-on-surface-variant">Tài sản</span>
+<div class="absolute top-4 left-1/2 w-full h-[2px] bg-outline-variant -z-0"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 relative">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center z-10 border border-outline-variant">
+<span class="text-sm">4</span>
+</div>
+<span class="text-label-md font-medium text-on-surface-variant">Nợ nần</span>
+<div class="absolute top-4 left-1/2 w-full h-[2px] bg-outline-variant -z-0"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 relative">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center z-10 border border-outline-variant">
+<span class="text-sm">5</span>
+</div>
+<span class="text-label-md font-medium text-on-surface-variant">Rủi ro</span>
+<div class="absolute top-4 left-1/2 w-full h-[2px] bg-outline-variant -z-0"></div>
+</div>
+<div class="flex flex-col items-center gap-2 relative">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center z-10 border border-outline-variant">
+<span class="text-sm">6</span>
+</div>
+<span class="text-label-md font-medium text-on-surface-variant">Kết quả</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Layout -->
+<main class="flex-1 pt-48 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto w-full">
+<!-- Title Section -->
+<div class="mb-10">
+<h1 class="font-headline-lg text-headline-lg md:text-display-lg text-primary mb-2 uppercase">THU NHẬP &amp; CHI TIÊU</h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl">
+            Phân tích dòng tiền hàng tháng để xác định tỷ lệ tiết kiệm và khả năng tích lũy của bạn.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Inputs -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Card: Ước tính nhanh -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 transition-shadow">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary">speed</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Ước tính nhanh</h3>
+</div>
+<div class="space-y-10">
+<!-- Income Slider -->
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<label class="font-label-md text-on-surface-variant">Tổng Thu nhập ước tính (VND/tháng)</label>
+<span class="font-bold text-primary text-xl" id="slider-income-val">50.000.000</span>
+</div>
+<input class="w-full h-2 bg-surface-container rounded-full cursor-pointer accent-primary" id="slider-income" max="200000000" min="0" step="1000000" type="range" value="50000000">
+</div>
+<!-- Expense Slider -->
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<label class="font-label-md text-on-surface-variant">Tổng Chi tiêu ước tính (VND/tháng)</label>
+<span class="font-bold text-tertiary text-xl" id="slider-expense-val">30.000.000</span>
+</div>
+<input class="w-full h-2 bg-surface-container rounded-full cursor-pointer accent-tertiary" id="slider-expense" max="200000000" min="0" step="1000000" type="range" value="30000000">
+</div>
+<!-- Quick Calc Result -->
+<div class="pt-8 border-t border-outline-variant flex flex-col sm:flex-row items-center justify-between gap-4">
+<span class="text-body-md text-on-surface-variant">Ước tính Tiết kiệm hàng tháng:</span>
+<div class="text-center sm:text-right">
+<span class="block text-headline-md font-bold text-primary" id="quick-savings-val">20.000.000 VND</span>
+<span class="text-label-md text-on-surface-variant" id="quick-savings-rate">(40% thu nhập)</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2 mt-4">
+<div class="w-px h-8 border-l-2 border-dashed border-outline-variant"></div>
+<span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-bold">Chi tiết bên dưới</span>
+</div>
+</div>
+</section>
+<!-- Card: Thu nhập hàng tháng -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 emerald-glow transition-shadow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-8">Thu nhập hàng tháng</h3>
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant">Thu nhập từ lương/kinh doanh (Net)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg py-3 px-4 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all pr-16 text-on-surface font-body-md" placeholder="0" type="number">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-label-md font-medium">VND</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant">Thu nhập thụ động (Cho thuê, đầu tư)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg py-3 px-4 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all pr-16 text-on-surface font-body-md" placeholder="0" type="number">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-label-md font-medium">VND</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant">Thu nhập khác (Thưởng, bonus ước tính)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg py-3 px-4 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all pr-16 text-on-surface font-body-md" placeholder="0" type="number">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-label-md font-medium">VND</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Card: Chi tiêu hàng tháng -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 emerald-glow transition-shadow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-8">Chi tiêu hàng tháng</h3>
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant">Chi phí cố định (Nhà ở, điện nước, bảo hiểm)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg py-3 px-4 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all pr-16 text-on-surface font-body-md" placeholder="0" type="number">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-label-md font-medium">VND</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant">Chi phí sinh hoạt (Ăn uống, đi lại, giải trí)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg py-3 px-4 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all pr-16 text-on-surface font-body-md" placeholder="0" type="number">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-label-md font-medium">VND</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant">Chi phí gia đình (Con cái, phụ dưỡng cha mẹ)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg py-3 px-4 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all pr-16 text-on-surface font-body-md" placeholder="0" type="number">
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-label-md font-medium">VND</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Real-time Analysis -->
+<aside class="lg:col-span-5 space-y-8 sticky top-52">
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<h4 class="font-headline-md text-headline-md font-bold text-primary">Cash Flow Summary</h4>
+<span class="material-symbols-outlined text-secondary cursor-help">info</span>
+</div>
+<div class="mb-6">
+<span class="block font-label-md text-on-surface-variant mb-2 uppercase tracking-tight font-semibold">Tỷ lệ Tiết kiệm</span>
+<span class="font-display-lg text-display-lg text-primary" id="final-savings-rate">0%</span>
+</div>
+<!-- Progress Bar -->
+<div class="relative h-2 w-full bg-surface-container rounded-full overflow-hidden mb-3">
+<div class="absolute top-0 left-0 h-full bg-primary transition-all duration-700 w-0" id="analysis-progress"></div>
+</div>
+<div class="flex justify-between text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-10">
+<span class="">Kém</span>
+<span class="">Trung bình</span>
+<span class="">Tốt</span>
+</div>
+<!-- Guidance Box -->
+<div class="p-5 bg-surface-container-low rounded-xl border-l-4 border-primary">
+<p class="font-body-md text-on-surface leading-snug" id="analysis-text">Hãy nhập dữ liệu để bắt đầu phân tích dòng tiền của bạn.</p>
+</div>
+<!-- Tip Box -->
+<div class="mt-8 p-6 bg-secondary-container/20 rounded-2xl border border-secondary-container/40 flex gap-4">
+<div class="shrink-0">
+<span class="material-symbols-outlined text-secondary fill-0">verified</span>
+</div>
+<div>
+<p class="font-label-md text-secondary font-bold mb-1">Dành cho High Earner:</p>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            FinPeace khuyến nghị tỷ lệ tiết kiệm lý tưởng là trên 30% thu nhập để đảm bảo mục tiêu tự do tài chính bền vững.
+                        </p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Footer -->
+<footer class="mt-24 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-body-md text-on-surface-variant">© 2024 FinPeace Vietnam. Bảo mật dữ liệu tại chỗ.</p>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md" href="#">Quyền riêng tư</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md" href="#">Điều khoản</a>
+<a class="text-primary font-bold hover:underline text-label-md font-label-md" href="#">Liên hệ chuyên gia</a>
+</div>
+</footer>
+</main>
+<!-- Bottom Nav -->
+<nav class="fixed bottom-0 left-0 w-full bg-surface-container-lowest/80 backdrop-blur-md border-t border-outline-variant py-5 z-50">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center">
+<button class="flex items-center gap-2 text-primary border-2 border-primary rounded-full px-8 py-3 font-bold hover:bg-primary/5 transition-all active:scale-95">
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+<span class="">Quay lại</span>
+</button>
+<div class="hidden md:flex gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-8 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+<button class="flex items-center gap-2 bg-primary text-on-primary rounded-full px-10 py-3 font-bold hover:brightness-110 shadow-lg shadow-primary/20 transition-all active:scale-95">
+<span class="">Tiếp tục</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</div>
+</nav>
+<script>
+    // Module: Quick Estimate Logic
+    const sliderIncome = document.getElementById('slider-income');
+    const sliderExpense = document.getElementById('slider-expense');
+    const displayIncome = document.getElementById('slider-income-val');
+    const displayExpense = document.getElementById('slider-expense-val');
+    const displayQuickSavings = document.getElementById('quick-savings-val');
+    const displayQuickRate = document.getElementById('quick-savings-rate');
+
+    function formatVND(num) {
+        return num.toLocaleString('vi-VN');
+    }
+
+    function updateQuickEstimate() {
+        const income = parseInt(sliderIncome.value);
+        const expense = parseInt(sliderExpense.value);
+        const savings = Math.max(0, income - expense);
+        const rate = income > 0 ? Math.round((savings / income) * 100) : 0;
+
+        displayIncome.textContent = formatVND(income);
+        displayExpense.textContent = formatVND(expense);
+        displayQuickSavings.textContent = formatVND(savings) + ' VND';
+        displayQuickRate.textContent = `(${rate}% thu nhập)`;
+    }
+
+    sliderIncome.addEventListener('input', updateQuickEstimate);
+    sliderExpense.addEventListener('input', updateQuickEstimate);
+
+    // Module: Detailed Analysis Logic (Real-time Sync)
+    const inputs = document.querySelectorAll('input[type="number"]');
+    const finalRate = document.getElementById('final-savings-rate');
+    const analysisBar = document.getElementById('analysis-progress');
+    const analysisText = document.getElementById('analysis-text');
+
+    function updateDetailedAnalysis() {
+        let totalIncome = 0;
+        let totalExpense = 0;
+
+        // Simplified mapping for demo purposes
+        const inputGroups = document.querySelectorAll('section');
+        const incomeInputs = inputGroups[1].querySelectorAll('input');
+        const expenseInputs = inputGroups[2].querySelectorAll('input');
+
+        incomeInputs.forEach(i => totalIncome += Number(i.value) || 0);
+        expenseInputs.forEach(i => totalExpense += Number(i.value) || 0);
+
+        if (totalIncome > 0) {
+            const savings = totalIncome - totalExpense;
+            const rate = Math.max(0, (savings / totalIncome) * 100);
+            const roundedRate = Math.round(rate);
+            
+            finalRate.textContent = roundedRate + '%';
+            analysisBar.style.width = Math.min(100, rate) + '%';
+
+            if (rate < 20) {
+                analysisBar.className = 'absolute top-0 left-0 h-full bg-error transition-all duration-700';
+                analysisText.textContent = "Tỷ lệ tiết kiệm hiện tại chưa tối ưu. Hãy xem xét giảm bớt các chi phí không cần thiết.";
+            } else if (rate < 35) {
+                analysisBar.className = 'absolute top-0 left-0 h-full bg-tertiary transition-all duration-700';
+                analysisText.textContent = "Bạn đang ở mức an toàn. Một chút nỗ lực tối ưu nữa sẽ giúp bạn đạt tự do tài chính nhanh hơn.";
+            } else {
+                analysisBar.className = 'absolute top-0 left-0 h-full bg-primary transition-all duration-700';
+                analysisText.textContent = "Tuyệt vời! Bạn đang duy trì tỷ lệ tích lũy của một High Earner. Hãy tiếp tục phát huy!";
+            }
+        } else {
+            finalRate.textContent = '0%';
+            analysisBar.style.width = '0%';
+            analysisText.textContent = "Hãy nhập dữ liệu để bắt đầu phân tích dòng tiền của bạn.";
+        }
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener('input', updateDetailedAnalysis);
+    });
+
+    // Init
+    updateQuickEstimate();
+</script>
+
+
+</body></html>

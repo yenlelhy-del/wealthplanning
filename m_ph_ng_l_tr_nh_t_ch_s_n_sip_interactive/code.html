@@ -1,0 +1,416 @@
+<!DOCTYPE html><html class="light" lang="vi" style=""><head></head><body class="text-on-surface"><svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-surface": "#2d3135",
+                      "on-tertiary-fixed": "#400010",
+                      "surface": "#f7f9ff",
+                      "on-surface-variant": "#3d4a3f",
+                      "surface-tint": "#006d38",
+                      "error-container": "#ffdad6",
+                      "background": "#f7f9ff",
+                      "on-primary-fixed": "#00210d",
+                      "primary-container": "#00a859",
+                      "outline": "#6d7b6e",
+                      "surface-variant": "#e0e2e8",
+                      "surface-bright": "#f7f9ff",
+                      "on-secondary-fixed-variant": "#005230",
+                      "on-background": "#181c20",
+                      "tertiary-fixed-dim": "#ffb2b9",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#ed657a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#eceef4",
+                      "on-primary-fixed-variant": "#005228",
+                      "surface-dim": "#d8dae0",
+                      "inverse-on-surface": "#eff1f7",
+                      "tertiary-fixed": "#ffdadc",
+                      "error": "#ba1a1a",
+                      "secondary-fixed-dim": "#8dd6a8",
+                      "secondary": "#216b45",
+                      "on-primary": "#ffffff",
+                      "surface-container-highest": "#e0e2e8",
+                      "on-primary-container": "#003317",
+                      "tertiary": "#a93249",
+                      "surface-container-low": "#f2f3f9",
+                      "surface-container-high": "#e6e8ee",
+                      "primary": "#006d38",
+                      "inverse-primary": "#59df89",
+                      "secondary-fixed": "#a8f3c3",
+                      "on-tertiary-fixed-variant": "#891833",
+                      "outline-variant": "#bccabc",
+                      "on-secondary-container": "#28714b",
+                      "on-secondary-fixed": "#002110",
+                      "on-tertiary-container": "#5d001b",
+                      "primary-fixed": "#77fca3",
+                      "on-surface": "#181c20",
+                      "primary-fixed-dim": "#59df89",
+                      "secondary-container": "#a8f3c3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max-width": "1280px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-md": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    }catch(_e){}</script>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-outline-variant px-margin-mobile md:px-margin-desktop h-20 w-full flex items-center justify-between">
+<div class="flex items-center gap-4">
+<img alt="FinPeace" class="h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMueOg3F-x9I9vJAEc5Z5Fbl88wa7n_5WssHhxqcXuB6knrpt3Oe4WD5NVD8pRpeBT0czSVe322wCSQmra2HUjSsf6-6QFm3Ip-ZkYp833jo9csdvn0C3JUwuLxpG-zcyqiMWuvTK1f_NfhZ806OFTntvKt1zuR11QsT8TSZAu2QeSp12mnhoQStMNYOE9x6G0WIXT27IR9nHieXCM3ZFDB8FCTWui-baELqPlwujl_kG5bEEEGFNDOK60yTjhjHLeMgKDEVt1_34K">
+</div>
+<div class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary py-2 transition-colors" href="#"><span style="font-weight: normal;">Đang thực hiện&nbsp;&nbsp;</span></a>
+<a class="text-on-surface-variant font-medium hover:bg-surface-container-low transition-colors px-4 py-2 rounded-lg" href="#"><b><u>Báo cáo&nbsp;</u></b></a>
+<a class="text-on-surface-variant font-medium hover:bg-surface-container-low transition-colors px-4 py-2 rounded-lg" href="#">Thư viện&nbsp;</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Lưu &amp; Thoát</button>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer text-3xl hover:text-primary">account_circle</span>
+</div>
+</header>
+<!-- Horizontal-->
+<div class="fixed top-20 left-0 right-0 z-40 bg-surface-container-lowest border-b border-outline-variant shadow-sm overflow-x-auto no-scrollbar">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center justify-between min-w-[800px]">
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<span class="text-label-md font-medium text-primary">Khởi đầu</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-primary -z-10"></div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<span class="text-label-md font-medium text-primary">Thu nhập</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-primary -z-10"></div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<span class="text-label-md font-medium text-primary">Chi tiêu</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-primary -z-10"></div>
+</div>
+<!-- Step 4 (Active) -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center z-10 ring-4 ring-primary/20">
+<span class="font-bold text-sm">4</span>
+</div>
+<span class="text-label-md font-bold text-primary">Tài sản</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-outline-variant -z-10"></div>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center z-10 border border-outline-variant">
+<span class="text-sm">5</span>
+</div>
+<span class="text-label-md font-medium text-on-surface-variant">Nợ nần</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-outline-variant -z-10"></div>
+</div>
+<!-- Step 6 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center z-10 border border-outline-variant">
+<span class="text-sm">6</span>
+</div>
+<span class="text-label-md font-medium text-on-surface-variant">Rủi ro</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-outline-variant -z-10"></div>
+</div>
+<!-- Step 7 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center z-10 border border-outline-variant">
+<span class="text-sm">7</span>
+</div>
+<span class="text-label-md font-medium text-on-surface-variant">Mục tiêu</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-outline-variant -z-10"></div>
+</div>
+<!-- Step 8 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center z-10 border border-outline-variant">
+<span class="text-sm">8</span>
+</div>
+<span class="text-label-md font-medium text-on-surface-variant">Kết quả</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex pt-[148px] min-h-screen">
+<!-- Main Canvas -->
+<main class="flex-1 w-full pb-24 overflow-y-auto">
+<!-- Hero Section -->
+<section class="relative w-full h-[400px] overflow-hidden flex items-end">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A stylized digital illustration in Emerald Zenith style featuring two minimalist silhouettes of people looking towards a rising sun over a calm sea. The colors blend from deep forest green to bright tropical green and golden yellow, representing financial clarity and a bright future. Soft, clean light beams radiate from the horizon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMAe-lJNtGCobcSvdcZTOdrDV0es5W6_9iB5u4RAyiYlK_G7ZaZk0PJFImxjGJBtDg419BLQWx76TrtOIiafTxwcA6VSU7pnIAVhEqHTrK_iqqHGrImP4FJ4fgOo6EInnJoy60H95TqQhCVDRQm82ogxT87LncBr67Skrb9mWcG44BxBXcUdLnI87w9oU9kVc5tnf0KgJjmxPEM-cpZfD5hjKoZqVCF0dF17dP8wNKGzcJulIfeOPOkW73gsa4A77XR1lDGxQN4wWW">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop pb-12 w-full max-w-container-max-width mx-auto">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">LỘ TRÌNH TÍCH SẢN CỔ PHIẾU (SIP) THEO MỤC TIÊU</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Dựa trên các mục tiêu và khả năng tài chính của bạn, đây là lộ trình tối ưu để hiện thực hóa ước mơ.
+                    </p>
+</div>
+</section>
+<div class="px-margin-mobile md:px-margin-desktop py-8 max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Strategy & Allocation -->
+<div class="lg:col-span-8 space-y-gutter">
+<!-- Growth Projection Chart -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl border border-outline-variant">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-headline-md text-primary">Dự báo Tăng trưởng Tài sản</h3>
+<div class="flex gap-4">
+<span class="flex items-center gap-2 text-label-md font-label-md text-on-surface-variant">
+<span class="w-3 h-3 rounded-full bg-primary"></span> Tích sản SIP
+                                    </span>
+<span class="flex items-center gap-2 text-label-md font-label-md text-on-surface-variant">
+<span class="w-3 h-3 rounded-full bg-secondary-fixed-dim"></span> Tiết kiệm thông thường
+                                    </span>
+</div>
+</div>
+<!-- Stylized Chart Placeholder -->
+<div class="relative h-[300px] w-full flex items-end justify-between px-4 pb-8 border-b border-l border-outline-variant overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="grid grid-cols-10 h-full w-full">
+<div class="border-r border-outline"></div><div class="border-r border-outline"></div><div class="border-r border-outline"></div><div class="border-r border-outline"></div><div class="border-r border-outline"></div><div class="border-r border-outline"></div><div class="border-r border-outline"></div><div class="border-r border-outline"></div><div class="border-r border-outline"></div><div></div>
+</div>
+</div>
+<!-- SIP Curve -->
+<svg class="absolute bottom-0 left-0 w-full h-[80%]" preserveAspectRatio="none" viewBox="0 0 1000 400">
+<path d="M0,400 C100,380 200,320 300,280 C400,240 500,180 600,140 C700,100 850,40 1000,0" fill="none" stroke="#006d38" stroke-dasharray="1000" stroke-dashoffset="1000" stroke-width="4">
+<animate attributeName="stroke-dashoffset" dur="2s" fill="freeze" from="1000" to="0"></animate>
+</path>
+<path d="M0,400 C100,380 200,320 300,280 C400,240 500,180 600,140 C700,100 850,40 1000,0 L1000,400 L0,400 Z" fill="url(#grad1)" opacity="0.1"></path>
+<defs>
+<linearGradient id="grad1" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#00a859;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#00a859;stop-opacity:0"></stop>
+</linearGradient>
+</defs>
+</svg>
+<!-- Milestone Dots -->
+<div class="absolute bottom-[20%] left-[30%] w-4 h-4 bg-primary rounded-full active-dot border-2 border-white cursor-pointer group">
+<div class="hidden group-hover:block absolute bottom-6 left-1/2 -translate-x-1/2 bg-surface p-3 rounded-lg shadow-lg text-label-md whitespace-nowrap z-20 border border-outline-variant">
+                                        Năm 3: Mục tiêu 1 Hoàn tất
+                                    </div>
+</div>
+<div class="absolute top-[10%] right-[10%] w-4 h-4 bg-primary rounded-full active-dot border-2 border-white cursor-pointer group">
+<div class="hidden group-hover:block absolute bottom-6 left-1/2 -translate-x-1/2 bg-surface p-3 rounded-lg shadow-lg text-label-md whitespace-nowrap z-20 border border-outline-variant">
+                                        Năm 10: Tự do Tài chính
+                                    </div>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant">Năm 1</span>
+<span class="text-label-md font-label-md text-on-surface-variant">Năm 5</span>
+<span class="text-label-md font-label-md text-on-surface-variant">Năm 10</span>
+<span class="text-label-md font-label-md text-on-surface-variant">Năm 15</span>
+<span class="text-label-md font-label-md text-on-surface-variant">Năm 20</span>
+</div>
+<p class="mt-4 text-on-surface-variant font-body-md text-body-md italic text-center">
+                                * Dự báo dựa trên tỷ suất sinh lời kỳ vọng 12%/năm và lạm phát 4%/năm.
+                            </p>
+</div>
+<!-- SIP Strategy Overview -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-surface-container-low p-6 rounded-3xl border border-outline-variant flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-2xl flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<h4 class="font-headline-md text-[20px] text-primary mb-3">Lợi ích của SIP</h4>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                            Kỷ luật đầu tư định kỳ hàng tháng.
+                                        </li>
+<li class="flex items-start gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                            Bình quân hóa chi phí (Dollar-cost averaging).
+                                        </li>
+<li class="flex items-start gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                            Tận dụng sức mạnh lãi suất kép dài hạn.
+                                        </li>
+</ul>
+</div>
+</div>
+<div class="glass-card p-6 rounded-3xl flex flex-col justify-center items-center text-center">
+<p class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-2">Tổng tích sản hàng tháng</p>
+<h2 class="font-display-lg text-primary">28.500.000 <span class="text-body-lg">VND</span></h2>
+<div class="mt-4 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full font-bold text-label-md">
+                                    Tương đương 35% thu nhập hàng tháng
+                                </div>
+</div>
+</div>
+<!-- Detailed Allocation Table -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl border border-outline-variant">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Mô phỏng Tích sản &amp; Tăng trưởng</h3>
+<div class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div>
+<label class="block font-label-md text-on-surface-variant mb-3">Số tiền tích sản hàng tháng (VND)</label>
+<div class="relative flex items-center">
+<input class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary" max="100000000" min="1000000" step="500000" type="range" value="28500000">
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-sm text-outline">1.000.000</span>
+<span class="text-sm font-bold text-primary">28.500.000 VND</span>
+<span class="text-sm text-outline">100.000.000</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-3">Mức tăng trưởng kỳ vọng</label>
+<div class="grid grid-cols-3 gap-3">
+<button class="py-3 px-2 rounded-xl border border-primary bg-primary-container/20 text-primary font-bold text-sm">Thận trọng (8%)</button>
+<button class="py-3 px-2 rounded-xl border border-outline-variant hover:border-primary transition-colors text-on-surface-variant text-sm">Cân bằng (12%)</button>
+<button class="py-3 px-2 rounded-xl border border-outline-variant hover:border-primary transition-colors text-on-surface-variant text-sm">Tăng trưởng (15%)</button>
+</div>
+</div>
+</div>
+<div class="bg-primary-container/10 p-6 rounded-2xl border border-primary/20 flex flex-col justify-center items-center text-center">
+<p class="text-on-surface-variant font-label-md uppercase tracking-wider mb-2">Tài sản dự kiến sau 20 năm</p>
+<h2 class="font-display-lg text-primary">15.420.000.000 <span class="text-body-lg">VND</span></h2>
+<p class="mt-4 text-sm text-on-surface-variant italic">* Kết quả dựa trên kỷ luật tích sản và sức mạnh lãi kép.</p>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low rounded-xl border border-outline-variant flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">info</span>
+<p class="text-body-md text-on-surface-variant">Đây là công cụ giả định giúp bạn hình dung lộ trình tài chính. Hiệu quả thực tế phụ thuộc vào biến động thị trường và danh mục cụ thể.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Timeline & CTA -->
+<div class="lg:col-span-4 space-y-gutter">
+<!-- Milestones Timeline -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl border border-outline-variant">
+<h3 class="font-headline-md text-headline-md text-primary mb-8">Cột mốc Quan trọng</h3>
+<div class="relative space-y-12">
+<div class="absolute left-[15px] top-0 bottom-0 w-[2px] bg-outline-variant"></div>
+<!-- Milestone 1 -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white z-10 border-4 border-surface">
+<span class="material-symbols-outlined text-sm">flag</span>
+</div>
+<p class="font-label-md text-label-md text-primary font-bold uppercase mb-1">Năm thứ 3</p>
+<h4 class="font-body-lg text-body-lg font-bold mb-1">Hoàn tất Quỹ dự phòng</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Duy trì 6-12 tháng chi tiêu thiết yếu và hoàn thành mục tiêu mua sắm nhỏ.</p>
+</div>
+<!-- Milestone 2 -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-outline z-10 border-4 border-surface">
+<span class="material-symbols-outlined text-sm">home</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase mb-1">Năm thứ 6</p>
+<h4 class="font-body-lg text-body-lg font-bold mb-1">Sở hữu Bất động sản đầu tiên</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Tích lũy đủ 30-50% giá trị tài sản mục tiêu để vay mua nhà/đất.</p>
+</div>
+<!-- Milestone 3 -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-outline z-10 border-4 border-surface">
+<span class="material-symbols-outlined text-sm">verified</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase mb-1">Năm thứ 10</p>
+<h4 class="font-body-lg text-body-lg font-bold mb-1">Tự do Tài chính Căn bản</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Lợi nhuận từ danh mục tích sản đủ chi trả cho các nhu cầu cơ bản hàng tháng.</p>
+</div>
+<!-- Milestone 4 -->
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-outline z-10 border-4 border-surface">
+<span class="material-symbols-outlined text-sm">celebration</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase mb-1">Năm thứ 20+</p>
+<h4 class="font-body-lg text-body-lg font-bold mb-1">Di sản &amp; Hưu trí An nhàn</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Tận hưởng cuộc sống viên mãn với khối tài sản tích lũy bền vững.</p>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="bg-surface-container-high p-6 rounded-3xl border-2 border-primary border-dashed mb-6">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Tư vấn Danh mục 1:1</h4>
+<p class="text-sm text-on-surface-variant">Thiết kế riêng cho mục tiêu của bạn</p>
+</div>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-xl font-bold hover:opacity-90 transition-all">
+        Kết nối với chuyên gia ngay
+    </button>
+</div><div class="bg-primary text-on-primary p-8 rounded-3xl shadow-lg relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-white/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-500"></div>
+<h3 class="font-headline-md text-headline-md mb-4 relative z-10">Sẵn sàng hành động?</h3>
+<p class="font-body-md text-body-md mb-8 opacity-90 relative z-10">FinPeace sẽ đồng hành cùng bạn trên từng bước đi của lộ trình này.</p>
+<div class="space-y-4 relative z-10">
+<button class="w-full bg-white text-primary py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-opacity-95 transition-all active:scale-95 shadow-md">
+                                    Bắt đầu thực hiện ngay
+                                    <span class="material-symbols-outlined">rocket_launch</span>
+</button>
+<button class="w-full bg-primary-container/20 border border-white/30 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary-container/40 transition-all">
+                                    Tải báo cáo chi tiết (PDF)
+                                    <span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-between items-center px-margin-mobile py-4 bg-surface-container-lowest border-t border-outline-variant backdrop-blur-md bg-opacity-80 z-50">
+<button class="flex items-center justify-center text-primary border border-primary rounded-full px-8 py-3 font-label-md text-label-md active:scale-95 transition-transform">
+<span class="material-symbols-outlined mr-2">arrow_back</span>
+            Quay lại
+        </button>
+<button class="flex items-center justify-center bg-primary text-on-primary rounded-full px-8 py-3 font-label-md text-label-md active:scale-95 transition-transform">
+            Tiếp tục
+            <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-8 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center border-t border-outline-variant bg-surface-container-lowest mb-24 md:mb-0">
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 md:mb-0">© 2024 FinPeace Vietnam. Bảo mật dữ liệu tại chỗ.</p>
+<div class="flex gap-6">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Quyền riêng tư</a>
+</div></footer>
+
+
+</body></html>

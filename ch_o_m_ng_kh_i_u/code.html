@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="vi" class="light" style=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f2f3f9",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#891833",
+                        "surface-bright": "#f7f9ff",
+                        "outline-variant": "#bccabc",
+                        "surface-tint": "#006d38",
+                        "on-error": "#ffffff",
+                        "surface": "#f7f9ff",
+                        "tertiary": "#a93249",
+                        "primary-fixed": "#77fca3",
+                        "on-primary-fixed": "#00210d",
+                        "secondary-fixed-dim": "#8dd6a8",
+                        "on-surface-variant": "#3d4a3f",
+                        "surface-dim": "#d8dae0",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#eff1f7",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#6d7b6e",
+                        "tertiary-container": "#ed657a",
+                        "on-secondary-fixed-variant": "#005230",
+                        "on-background": "#181c20",
+                        "on-secondary-fixed": "#002110",
+                        "surface-container-high": "#e6e8ee",
+                        "inverse-surface": "#2d3135",
+                        "inverse-primary": "#59df89",
+                        "secondary-fixed": "#a8f3c3",
+                        "on-primary-fixed-variant": "#005228",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#181c20",
+                        "error": "#ba1a1a",
+                        "primary-container": "#00a859",
+                        "background": "#f7f9ff",
+                        "on-secondary-container": "#28714b",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#216b45",
+                        "tertiary-fixed": "#ffdadc",
+                        "tertiary-fixed-dim": "#ffb2b9",
+                        "primary-fixed-dim": "#59df89",
+                        "secondary-container": "#a8f3c3",
+                        "on-tertiary-container": "#5d001b",
+                        "on-tertiary-fixed": "#400010",
+                        "surface-container-highest": "#e0e2e8",
+                        "surface-variant": "#e0e2e8",
+                        "primary": "#006d38",
+                        "surface-container": "#eceef4",
+                        "on-primary-container": "#003317"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max-width": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    }catch(_e){}</script></head><body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+
+    <!-- Section Background (Atmospheric Anchor) -->
+    <div class="fixed inset-0 -z-10 w-full h-full opacity-30">
+        <div style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnmi7PMuKpE5rnOzf5qZjpSLZDqKCc8eBAlzNYcdiaYbZNyojLSNVkhDBeIcuM_dzAVBcAQ62BqSO5DBAda6q1kRXgucZFkFyRacQE9vb_vyrk-4qOTdGnsSgrQ2-8hL5sLXz3_X5sU79kU0zY1Fti-4kPBE5eiSvVbtyAXUUnXsOhlrywKTM8Xrp1t0BFiGqrJRZpLP6tiIV8dE0_ZeWsEIqotZm0dbsN8buSfnQ9szs-kogX_iGH6zvw5oDIgn6wvJG7_FBsuwKc')" data-alt="A serene landscape illustration featuring a vibrant sunrise over a stylized desert or calm sea. Soft yellow rays of light extend from the horizon across a sky transitioning from warm amber to a cool, misty green. In the foreground, two minimalist silhouettes of people gaze toward the horizon, symbolizing a shared journey toward financial clarity and peace. The overall style is clean, corporate glassmorphism with a peaceful, visionary atmosphere." class="w-full h-full bg-cover bg-center"></div>
+        <div class="absolute inset-0 hero-gradient"></div>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-surface-container-lowest dark:bg-surface-dim border-b border-outline-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full z-50 sticky top-0">
+        <div class="flex items-center">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcGEDtfd_jc-qan6_MSWB3Gh8zJnErued3lREu_V8solNWBGj6JGF_sTWtMm96WQnIfeT1pN6Kp8cVKWi1dqUyW1QBPS74ZUIAMcfFmBvUpX4eZGflI6k8afPSeSVg06g7XjlP9RnghOgy8MMGubRJIu6M2YrIASmrTD3lUjtsykUwcfJ3hybmANdM4zYIcX110z9ddWdNa-oMNoj2mXV3YfA5H6_tjqmolc4HcQdkUE1N1VATHnBHOHB33xrPhAN8lugEQr0ghJ5Z" alt="FinPeace Logo" class="h-10 w-auto">
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="text-on-surface-variant font-medium md:flex hidden items-center gap-2 font-label-md text-label-md">
+                <span class="material-symbols-outlined text-primary">verified_user</span>
+                Bảo mật chuẩn quốc tế
+            </span>
+            <button class="bg-surface-container-lowest text-primary hover:bg-surface-container-low transition-colors px-6 py-2 rounded-full border border-primary font-label-md text-label-md">
+                Lưu &amp; Thoát
+            </button>
+            <div class="material-symbols-outlined text-primary cursor-pointer text-3xl">account_circle</div>
+        </div>
+    </nav>
+
+    <main class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20 relative">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Content -->
+            <div class="lg:col-span-7 space-y-8">
+                <div class="space-y-4">
+                    <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+                        Phần 0: Chào mừng &amp; Onboarding
+                    </span>
+                    <h1 class="font-display-lg text-display-lg md:text-[56px] text-primary leading-tight">Rà Soát Sức Khỏe Tài Chính Cá Nhân</h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Khám phá bản đồ tài chính của riêng bạn theo chuẩn CFP quốc tế và triết lý FinPeace. Một hành trình thấu hiểu dòng tiền để kiến tạo sự bình an trong tâm trí.
+                    </p>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button class="bg-primary-container text-on-primary-container hover:bg-opacity-90 transition-all px-10 py-4 rounded-full font-headline-md text-headline-md flex items-center justify-center gap-3 active:scale-95">
+                        Bắt đầu hành trình
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    <button class="border-2 border-primary text-primary hover:bg-surface-container-low transition-all px-10 py-4 rounded-full font-headline-md text-headline-md flex items-center justify-center gap-3 active:scale-95">
+                        Tìm hiểu thêm
+                    </button>
+                </div>
+
+                <!-- Security Note -->
+                <div class="flex items-start gap-3 p-4 rounded-xl bg-surface-container-high/50 border border-outline-variant max-w-xl">
+                    <span class="material-symbols-outlined text-primary mt-1">security</span>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        <strong>Lưu ý bảo mật:</strong> Dữ liệu của bạn được bảo mật tại chỗ (local storage) và chỉ phục vụ mục đích đánh giá cá nhân. Chúng tôi không thu thập thông tin nhạy cảm khi chưa được phép.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bento Info Grid (6-Step Process) -->
+            <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                <div class="col-span-2 glass-panel p-8 rounded-3xl border border-outline-variant hover:border-primary/30 transition-all duration-300">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4 flex items-center gap-3">
+                        <span class="material-symbols-outlined bg-primary text-on-primary p-2 rounded-lg">map</span>
+                        Lộ trình 6 bước
+                    </h3>
+                    <p class="text-on-surface-variant font-body-md text-body-md mb-6">Chúng tôi sẽ cùng bạn đi qua từng khía cạnh quan trọng nhất của bức tranh tài chính:</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-on-surface font-medium">
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-secondary-container text-on-secondary-container text-sm">1</span>
+                            Thu nhập &amp; Tiềm năng
+                        </div>
+                        <div class="flex items-center gap-3 text-on-surface font-medium">
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-secondary-container text-on-secondary-container text-sm">2</span>
+                            Chi tiêu &amp; Lối sống
+                        </div>
+                        <div class="flex items-center gap-3 text-on-surface font-medium">
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-secondary-container text-on-secondary-container text-sm">3</span>
+                            Tài sản tích lũy
+                        </div>
+                        <div class="flex items-center gap-3 text-on-surface font-medium">
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-secondary-container text-on-secondary-container text-sm">4</span>
+                            Quản trị nợ nần
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-3xl border border-outline-variant flex flex-col items-center justify-center text-center gap-2">
+                    <span class="material-symbols-outlined text-tertiary text-4xl">psychology</span>
+                    <span class="font-label-md text-label-md">Triết lý FinPeace</span>
+                </div>
+
+                <div class="glass-panel p-6 rounded-3xl border border-outline-variant flex flex-col items-center justify-center text-center gap-2">
+                    <span class="material-symbols-outlined text-secondary text-4xl">verified</span>
+                    <span class="font-label-md text-label-md">Chuẩn CFP®</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Success indicators / Stats (Soft Glass Layer) -->
+    <section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12">
+        <div class="bg-surface-container-lowest/80 backdrop-blur-md rounded-[40px] border border-outline-variant p-10 flex flex-wrap justify-around items-center gap-8 shadow-sm">
+            <div class="text-center space-y-1">
+                <div class="text-3xl font-bold text-primary">15+</div>
+                <div class="text-on-surface-variant font-label-md text-label-md">Phút thực hiện</div>
+            </div>
+            <div class="h-10 w-[1px] bg-outline-variant hidden md:block"></div>
+            <div class="text-center space-y-1">
+                <div class="text-3xl font-bold text-primary">100%</div>
+                <div class="text-on-surface-variant font-label-md text-label-md">Bảo mật dữ liệu</div>
+            </div>
+            <div class="h-10 w-[1px] bg-outline-variant hidden md:block"></div>
+            <div class="text-center space-y-1">
+                <div class="text-3xl font-bold text-primary">24/7</div>
+                <div class="text-on-surface-variant font-label-md text-label-md">Hỗ trợ chuyên gia</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shared Footer -->
+    <footer class="w-full py-8 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center mb-24 border-t border-outline-variant bg-surface-container-lowest dark:bg-surface-dim">
+        <div class="text-on-surface-variant font-body-md text-body-md mb-4 md:mb-0">
+            © 2024 FinPeace Vietnam. Bảo mật dữ liệu tại chỗ.
+        </div>
+        <div class="flex gap-8">
+            <a href="#" class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors">Quyền riêng tư</a>
+            <a href="#" class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors">Điều khoản</a>
+            <a href="#" class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors">Liên hệ chuyên gia</a>
+        </div>
+    </footer>
+
+    <!-- Bottom Navigation Bar (Contextual for Mobile/Navigation Flow) -->
+    <div class="fixed bottom-0 left-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface-container-lowest dark:bg-surface-dim border-t border-outline-variant backdrop-blur-md bg-opacity-80 shadow-md z-50">
+        <button class="flex items-center justify-center text-primary border border-primary rounded-full px-8 py-3 hover:bg-surface-container-low active:scale-95 transition-transform font-label-md text-label-md gap-2">
+            <span class="material-symbols-outlined">arrow_back</span>
+            Quay lại
+        </button>
+        <button class="flex items-center justify-center bg-primary text-on-primary rounded-full px-12 py-3 hover:opacity-90 active:scale-95 transition-transform font-label-md text-label-md gap-2 font-bold shadow-lg shadow-primary/20">
+            Tiếp tục
+            <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+    </div>
+
+    <script class="">
+        // Micro-interactions and atmospheric effects
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.glass-panel');
+            const x = (e.clientX / window.innerWidth - 0.5) * 10;
+            const y = (e.clientY / window.innerHeight - 0.5) * 10;
+            
+            cards.forEach(card => {
+                card.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+
+        // Basic button hover state logic based on JSON styles
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                btn.style.transition = 'all 0.2s cubic-bezier(0.4, 0,</script></body></html>

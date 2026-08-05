@@ -1,0 +1,403 @@
+<!DOCTYPE html><html class="light" lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e6e8ee",
+                        "background": "#f7f9ff",
+                        "primary-fixed": "#77fca3",
+                        "tertiary-fixed-dim": "#ffb2b9",
+                        "surface-bright": "#f7f9ff",
+                        "outline": "#6d7b6e",
+                        "on-background": "#181c20",
+                        "secondary-fixed": "#a8f3c3",
+                        "inverse-on-surface": "#eff1f7",
+                        "secondary-fixed-dim": "#8dd6a8",
+                        "on-primary-fixed-variant": "#005228",
+                        "on-primary-container": "#003317",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f7f9ff",
+                        "on-surface": "#181c20",
+                        "on-secondary-fixed": "#002110",
+                        "primary-container": "#00a859",
+                        "tertiary": "#a93249",
+                        "tertiary-container": "#ed657a",
+                        "on-surface-variant": "#3d4a3f",
+                        "on-secondary-container": "#28714b",
+                        "secondary-container": "#a8f3c3",
+                        "outline-variant": "#bccabc",
+                        "primary": "#006d38",
+                        "on-primary-fixed": "#00210d",
+                        "surface-container": "#eceef4",
+                        "inverse-primary": "#59df89",
+                        "tertiary-fixed": "#ffdadc",
+                        "surface-container-low": "#f2f3f9",
+                        "surface-container-highest": "#e0e2e8",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d8dae0",
+                        "primary-fixed-dim": "#59df89",
+                        "error": "#ba1a1a",
+                        "secondary": "#216b45",
+                        "surface-variant": "#e0e2e8",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#5d001b",
+                        "inverse-surface": "#2d3135",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#400010",
+                        "surface-tint": "#006d38",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#005230",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#891833"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "container-max-width": "1280px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-outline-variant px-margin-mobile md:px-margin-desktop h-20 w-full flex items-center justify-between">
+<div class="flex items-center gap-4">
+<img alt="FinPeace Logo" class="h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXx9pjvWyjq5QXMJZ3B9hvqfdDkreNYjZzPvC5NWRmDWLf5kTlGb-X80SLAoRowFl3021aMYLyywFBJ4TSuHos_9J2keB0ff3-RG7o9qGgT_rqdmJxDo7m4umbg7Z18y8bnI1llkelimhh8F0g9lGEIvTJUNmKLqRdOYmzIfjZevIzDGYoLtr51CJgSRlimSOeJj9tby9qofBNIAYH-OfNV5F-qEfLdwrzPdjajxut44usCUDIpv1Acnb8vf_hbCOnX3I-NxAemlnN">
+</div>
+<div class="hidden md:flex gap-8">
+<a class="text-on-surface-variant font-medium hover:bg-surface-container-low transition-colors px-4 py-2 rounded-lg" href="#"><b><u>Đang thực hiện</u></b></a>
+<a class="text-on-surface-variant font-medium hover:bg-surface-container-low transition-colors px-4 py-2 rounded-lg" href="#">Báo cáo&nbsp;</a>
+<a class="text-on-surface-variant font-medium hover:bg-surface-container-low transition-colors px-4 py-2 rounded-lg" href="#">Thư viện&nbsp;</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center gap-2 text-primary font-medium hover:bg-surface-container-low px-4 py-2 rounded-lg transition-colors scale-95 active:opacity-80">
+<span class="material-symbols-outlined">save</span>
+<span class="">Lưu &amp; Thoát</span>
+</button>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer text-3xl hover:text-primary">account_circle</span>
+</div>
+</header>
+<!-- Horizontal Smart Progress Bar -->
+<div class="fixed top-20 left-0 right-0 z-40 bg-surface-container-lowest border-b border-outline-variant shadow-sm overflow-x-auto no-scrollbar">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center justify-between min-w-[800px]">
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<span class="text-label-md font-medium text-primary">Khởi đầu</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-primary -z-10"></div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<span class="text-label-md font-medium text-primary">Thu nhập</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-primary -z-10"></div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<span class="text-label-md font-medium text-primary">Chi tiêu</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-primary -z-10"></div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<span class="text-label-md font-medium text-primary">Tài sản</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-primary -z-10"></div>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<span class="text-label-md font-medium text-primary">Nợ nần</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-primary -z-10"></div>
+</div>
+<!-- Step 6 (Active) -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center z-10 ring-4 ring-primary-container/30">
+<span class="font-bold text-sm">6</span>
+</div>
+<span class="text-label-md font-bold text-primary">Rủi ro</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-outline-variant -z-10"></div>
+</div>
+<!-- Step 7 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center z-10 border border-outline-variant">
+<span class="text-sm">7</span>
+</div>
+<span class="text-label-md font-medium text-on-surface-variant">Mục tiêu</span>
+<div class="absolute top-4 left-[50%] w-full h-[2px] bg-outline-variant -z-10"></div>
+</div>
+<!-- Step 8 -->
+<div class="flex flex-col items-center gap-2 flex-1 relative group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center z-10 border border-outline-variant">
+<span class="text-sm">8</span>
+</div>
+<span class="text-label-md font-medium text-on-surface-variant">Kết quả</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex pt-[148px] pb-24 md:pb-0 min-h-screen">
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin-mobile md:px-margin-desktop py-12 max-w-container-max-width mx-auto">
+<!-- Section Header -->
+<section class="mb-12 relative overflow-hidden rounded-3xl bg-primary text-on-primary p-8 md:p-12 shadow-xl">
+<div class="relative z-10 max-w-2xl">
+<h1 class="font-display-lg text-display-lg mb-4 uppercase">Quản trị rủi ro &amp; Bảo hiểm</h1>
+<p class="font-body-lg text-body-lg opacity-90">Bảo vệ thành quả tài chính và sự an tâm của gia đình trước những biến động không lường trước của cuộc sống. Một kế hoạch tài chính bền vững bắt đầu từ một lá chắn rủi ro vững chắc.</p>
+</div>
+<div class="absolute right-[-10%] top-[-20%] w-1/2 h-[140%] opacity-20 pointer-events-none">
+<img alt="Custom Illustration" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdqRNqFz3vLavOwWoaCO7rLrm4HZO0k9KSbhrIM3i8b_sOLCnnYi4U542mayKQGM5pdJOEpwZbPCnc6UZTyq1MX2SqcdLa27IvDw3LZawGNnzS8SBZJS_CfeQrYhvfkpGU_lNTgGvySUOj-yPxsIttSzNUDOLkw5gkGMeLbd4dnzc4RaZWSBPN4RkwztH9Y19dZR2dh_h20EZJfh8OLHMSdRTMfzmVezgHrvZtMHXfN3AJ1gbaCuoBSTxknUvM4jC9e_Kiy-yKWrxn">
+</div>
+</section>
+<!-- Grid Layout for Insurance Analysis -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Dashboard & Health Indicator (Left) -->
+<div class="lg:col-span-4 space-y-8">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl p-6 shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Chỉ số Sức khỏe</h3>
+<div class="flex flex-col items-center justify-center py-8">
+<div class="relative w-48 h-48">
+<svg class="w-full h-full" viewBox="0 0 100 100">
+<circle class="text-surface-container-highest stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-width="8"></circle>
+<circle class="text-primary-container stroke-current progress-ring-circle" cx="50" cy="50" fill="transparent" r="40" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="text-3xl font-bold text-primary">9.5%</span>
+<span class="text-xs uppercase font-medium text-on-surface-variant">Phí/Thu nhập</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center p-3 bg-secondary-container rounded-xl">
+<span class="font-label-md text-label-md text-on-secondary-container">Trạng thái</span>
+<span class="px-3 py-1 bg-primary text-on-primary rounded-full text-xs font-bold uppercase tracking-wider">Lành mạnh</span>
+</div>
+<p class="text-xs text-on-surface-variant text-center px-4 italic">Ngưỡng chuẩn an toàn cho tầng lớp trung lưu và thượng lưu là từ 8 - 12% thu nhập năm.</p>
+</div>
+</div>
+<!-- Recommendation Card -->
+<div class="rounded-2xl p-6 border-l-4 border-primary shadow-lg bg-surface-container-lowest">
+<div class="flex items-start gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">stars</span>
+<h4 class="font-headline-md text-headline-md text-primary">Lưu ý Quản trị Rủi ro</h4>
+</div>
+<div class="space-y-4 mb-6">
+<div class="space-y-1">
+<p class="font-bold text-primary text-label-md">Khi nào cần mua?</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Khi bạn là thu nhập chính của gia đình, có khoản nợ lớn, hoặc muốn bảo vệ tài sản trước các biến cố sức khỏe nghiêm trọng.</p>
+</div>
+<div class="space-y-1">
+<p class="font-bold text-primary text-label-md">Khi nào chưa cần?</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Khi bạn đã có quỹ dự phòng khẩn cấp đủ lớn, không có người phụ thuộc tài chính, hoặc đã được bảo vệ đầy đủ bởi các chương trình phúc lợi khác.</p>
+</div>
+</div>
+<button class="w-full py-3 bg-surface-container-lowest border border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-on-primary transition-all transform active:scale-95">Xem hướng dẫn chi tiết</button>
+</div>
+</div>
+<!-- Input Detail Fields (Right) -->
+<div class="lg:col-span-8 space-y-8">
+<!-- 1st: BHYT -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl p-8 shadow-sm transition-all hover:shadow-md relative group">
+<div class="absolute top-6 right-8">
+<span class="material-symbols-outlined text-on-surface-variant cursor-help hover:text-primary transition-colors">info</span>
+</div>
+<div class="flex items-center gap-4 mb-8">
+<div class="p-3 bg-surface-container-low rounded-xl text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">health_and_safety</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Bảo hiểm y tế (BHYT)</h3>
+<p class="text-sm text-on-surface-variant">Quyền lợi cơ bản từ quỹ bảo hiểm xã hội</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-2 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Hạn mức thanh toán/năm</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary font-medium text-on-surface" placeholder="Nhập số tiền..." type="text">
+<span class="absolute right-4 top-4 text-on-surface-variant font-label-md">VND</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Phí đóng hàng năm</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary font-medium text-on-surface" placeholder="Nhập phí..." type="text">
+<span class="absolute right-4 top-4 text-on-surface-variant font-label-md">VND</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2nd: Voluntary Health Insurance -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl p-8 shadow-sm transition-all hover:shadow-md relative group">
+<div class="absolute top-6 right-8">
+<span class="material-symbols-outlined text-on-surface-variant cursor-help hover:text-primary transition-colors">info</span>
+</div>
+<div class="flex items-center gap-4 mb-8">
+<div class="p-3 bg-surface-container-low rounded-xl text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">medical_services</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Bảo hiểm sức khỏe tự nguyện</h3>
+<p class="text-sm text-on-surface-variant">Chăm sóc y tế cao cấp &amp; Tai nạn</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Hạn mức chi trả/năm</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary font-medium text-on-surface" placeholder="Nhập số tiền..." type="text">
+<span class="absolute right-4 top-4 text-on-surface-variant font-label-md">VND</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Phí đóng hàng năm</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary font-medium text-on-surface" placeholder="Nhập phí..." type="text">
+<span class="absolute right-4 top-4 text-on-surface-variant font-label-md">VND</span>
+</div>
+</div>
+<div class="space-y-2 flex items-end">
+<button class="flex items-center justify-center gap-2 w-full p-4 border-2 border-dashed border-outline-variant rounded-xl text-on-surface-variant hover:border-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add</span>
+                                    Thêm hợp đồng
+                                </button>
+</div>
+</div>
+</div>
+<!-- 3rd: Life Insurance -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl p-8 shadow-sm transition-all hover:shadow-md relative group">
+<div class="absolute top-6 right-8">
+<span class="material-symbols-outlined text-on-surface-variant cursor-help hover:text-primary transition-colors">info</span>
+</div>
+<div class="flex items-center gap-4 mb-8">
+<div class="p-3 bg-surface-container-low rounded-xl text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">family_restroom</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Bảo hiểm Nhân thọ</h3>
+<p class="text-sm text-on-surface-variant">Bảo vệ nguồn thu nhập chính của gia đình</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Số tiền bảo hiểm (Mệnh giá)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary font-medium text-on-surface" type="text" value="5.000.000.000">
+<span class="absolute right-4 top-4 text-on-surface-variant font-label-md">VND</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Phí đóng hàng năm</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary font-medium text-on-surface" type="text" value="85.000.000">
+<span class="absolute right-4 top-4 text-on-surface-variant font-label-md">VND</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Thời hạn (Năm)</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary font-medium text-on-surface" type="number" value="15">
+</div>
+</div>
+</div>
+<!-- 4th: Non-Life Insurance -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl p-8 shadow-sm transition-all hover:shadow-md relative group">
+<div class="absolute top-6 right-8">
+<span class="material-symbols-outlined text-on-surface-variant cursor-help hover:text-primary transition-colors">info</span>
+</div>
+<div class="flex items-center gap-4 mb-8">
+<div class="p-3 bg-surface-container-low rounded-xl text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">directions_car</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Bảo hiểm Phi nhân thọ</h3>
+<p class="text-sm text-on-surface-variant">Nhà cửa, xe cộ &amp; tài sản khác</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Giá trị tài sản</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary font-medium text-on-surface" placeholder="..." type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Phí đóng hàng năm</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary font-medium text-on-surface" placeholder="..." type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Thời hạn</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl p-4 focus:ring-2 focus:ring-primary focus:border-primary font-medium text-on-surface" placeholder="..." type="text">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Meta -->
+<footer class="w-full py-12 flex flex-col md:flex-row justify-between items-center mt-12 border-t border-outline-variant opacity-60">
+<p class="font-body-md text-body-md text-secondary">© 2024 FinPeace Vietnam. Bảo mật dữ liệu tại chỗ.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="text-on-surface-variant hover:text-primary font-label-md transition-colors" href="#">Quyền riêng tư</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md transition-colors" href="#">Điều khoản</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md transition-colors" href="#">Liên hệ chuyên gia</a>
+</div>
+</footer>
+</main>
+</div>
+<!-- Bottom Navigation (Mobile & Persistence) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface-container-lowest border-t border-outline-variant backdrop-blur-md bg-opacity-80 shadow-md z-50">
+<button class="flex items-center justify-center text-primary border border-primary rounded-full px-8 py-3 font-label-md hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined mr-2">arrow_back</span>
+            Quay lại
+        </button>
+<button class="flex items-center justify-center bg-primary-container text-on-primary-container rounded-full px-12 py-3 font-label-md hover:opacity-90 active:scale-95 transition-all shadow-md">
+            Tiếp theo
+        </button>
+</nav>
+
+
+</body></html>
