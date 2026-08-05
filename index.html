@@ -1591,97 +1591,153 @@
             margin: 0;
         }
 
-        /* MOBILE & RESPONSIVE OPTIMIZATION */
+        /* ULTRA-CLEAN MOBILE & TABLET RESPONSIVE OPTIMIZATION */
         body {
             overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
         }
 
         @media (max-width: 992px) {
-            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-            .about-hyper-header { flex-direction: column; align-items: flex-start; }
-            .about-3cards-grid { grid-template-columns: repeat(2, 1fr); }
-            .pricing-grid-2 { grid-template-columns: 1fr; max-width: 580px; }
+            .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+            .about-hyper-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .about-3cards-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .pricing-grid-2 { grid-template-columns: 1fr; max-width: 580px; gap: 24px; }
             .slider-slide {
                 flex: 0 0 calc(50% - 11px);
                 min-width: calc(50% - 11px);
             }
             .pkg-card.pkg-grow { transform: none; }
+            .experts-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
-            .section-padding { padding: 60px 0; }
-            .section-title { font-size: 25px; }
-            .section-kicker { font-size: 11px; }
+            .container { padding: 0 16px; }
+            .section-padding { padding: 48px 0; }
+            .section-header { margin-bottom: 28px; text-align: center; }
+            .section-title { font-size: 23px; line-height: 1.35; }
+            .section-kicker { font-size: 11px; letter-spacing: 0.1em; }
 
-            /* Header & Nav */
-            header { padding: 14px 0; }
-            .logo-header-img { height: 28px; }
+            /* Header & Sticky Nav */
+            header { padding: 12px 0; }
+            .logo-header-img { height: 26px; }
             .nav-links { display: none; }
-            .btn-cta-nav { padding: 10px 16px; font-size: 13px; border-radius: 12px; }
+            .btn-cta-nav { padding: 9px 14px; font-size: 12.5px; border-radius: 10px; font-weight: 700; }
 
-            /* Hero */
-            .hero { padding: 36px 0 54px 0; }
-            .hero h1 { font-size: 28px; line-height: 1.3; }
-            .hero-subtitle { font-size: 15px; margin-bottom: 24px; }
-            .trust-row { flex-direction: column; gap: 10px; width: 100%; }
-            .trust-card { width: 100%; text-align: center; }
-            .hero-artwork-img { height: 260px; border-radius: 20px; }
+            /* Hero Section */
+            .hero { padding: 24px 0 44px 0; }
+            .hero-badge { font-size: 11.5px; padding: 5px 12px; margin-bottom: 14px; }
+            .hero h1 { font-size: 25px; line-height: 1.32; letter-spacing: -0.01em; margin-bottom: 14px; }
+            .hero-subtitle { font-size: 14.5px; line-height: 1.6; margin-bottom: 20px; }
+            .trust-row { flex-direction: column; gap: 8px; width: 100%; margin-top: 24px; }
+            .trust-card { width: 100%; padding: 12px 14px; border-radius: 14px; text-align: center; }
+            .trust-item-val { font-size: 17px; margin-bottom: 2px; }
+            .trust-item-lbl { font-size: 12px; }
+            .hero-artwork-card { padding: 10px; border-radius: 20px; }
+            .hero-artwork-img { height: 230px; border-radius: 14px; }
 
             /* Grids */
-            .pain-grid, .story-wrapper, .lands-grid, .tower-grid, .experts-grid, .footer-grid, .about-3cards-grid, .about-brand-right { 
+            .pain-grid, .lands-grid, .tower-grid, .experts-grid, .footer-grid, .about-3cards-grid, .about-brand-right { 
                 grid-template-columns: 1fr !important; 
-                gap: 20px; 
+                gap: 16px !important; 
             }
 
-            /* Story & Cards */
-            .story-wrapper { padding: 24px 20px; flex-direction: column; }
-            .story-artwork-thumb { height: 200px; width: 100%; }
-            .pain-card { padding: 24px 20px; }
-            .land-card-body { padding: 24px 20px; }
-            .land-card-img { height: 200px; }
+            /* Pain Cards */
+            .pain-card { padding: 20px 18px; border-radius: 18px; }
+            .pain-card-badge { font-size: 12px; width: 28px; height: 28px; margin-bottom: 12px; }
+            .pain-card h3 { font-size: 17px; margin-bottom: 8px; }
+            .pain-card p { font-size: 14px; line-height: 1.6; }
 
-            /* Tower / Pyramid */
-            .tower-grid { gap: 32px; }
-            .pyramid-tier { padding: 16px 18px; border-radius: 14px; }
-            .pyramid-tier-title { font-size: 14.5px; }
-            .tower-detail-box { padding: 24px 18px; border-radius: 18px; }
+            /* Storytelling Case Study */
+            .story-wrapper { padding: 20px 16px; border-radius: 20px; flex-direction: column; gap: 18px; }
+            .story-artwork-thumb { height: 190px; width: 100%; border-radius: 14px; }
+            .story-title { font-size: 19px; line-height: 1.35; margin-bottom: 12px; }
+            .story-body p { font-size: 14px; line-height: 1.65; }
+            .story-quote-box { padding: 14px 16px; font-size: 13.5px; border-radius: 12px; margin-top: 14px; }
+
+            /* 3 Lands Cards */
+            .land-card { border-radius: 18px; }
+            .land-card-img { height: 180px; }
+            .land-card-body { padding: 20px 16px; }
+            .land-tag { font-size: 11px; margin-bottom: 6px; }
+            .land-card h3 { font-size: 19px; margin-bottom: 8px; }
+            .land-card p { font-size: 14px; line-height: 1.6; }
+
+            /* Interactive Tower / Pyramid */
+            .tower-section { padding: 48px 0; }
+            .tower-grid { gap: 24px; }
+            .pyramid-container { gap: 12px; padding: 0; }
+            .pyramid-tier { padding: 14px 16px; border-radius: 14px; flex-direction: row; gap: 10px; }
+            .pyramid-tier-title { font-size: 13.5px; white-space: normal; line-height: 1.3; }
+            .pyramid-tier-tag { font-size: 10.5px; padding: 4px 8px; }
+            .tower-detail-box { padding: 20px 16px; border-radius: 18px; }
+            .tower-detail-box h3 { font-size: 17px; margin-bottom: 10px; }
+            .tower-detail-box p { font-size: 13.5px; line-height: 1.6; margin-bottom: 16px; }
+            .tower-detail-box ul li { font-size: 13.5px; padding-left: 32px; margin-bottom: 10px; }
 
             /* 6-Step Timeline */
-            .timeline-section { padding: 60px 0; }
-            .timeline-container { padding: 10px 0; }
-            .timeline-container::before { left: 18px; top: 20px; bottom: 20px; width: 3px; }
-            .timeline-item { padding-left: 52px; margin-bottom: 28px; }
-            .timeline-node { left: 0; width: 38px; height: 38px; font-size: 14.5px; border-width: 3px; }
-            .timeline-content-card { padding: 20px 16px; border-radius: 16px; }
-            .timeline-step-tag { font-size: 10.5px; letter-spacing: 0.04em; margin-bottom: 8px; }
-            .timeline-content-card h3 { font-size: 17.5px; margin-bottom: 8px; }
-            .timeline-content-card p { font-size: 14px; line-height: 1.6; }
+            .timeline-section { padding: 48px 0; }
+            .timeline-container { padding: 6px 0; }
+            .timeline-container::before { left: 16px; top: 16px; bottom: 16px; width: 3px; }
+            .timeline-item { padding-left: 48px; margin-bottom: 22px; }
+            .timeline-node { left: 0; width: 34px; height: 34px; font-size: 13px; border-width: 3px; }
+            .timeline-content-card { padding: 18px 15px; border-radius: 16px; }
+            .timeline-step-tag { font-size: 10px; letter-spacing: 0.03em; margin-bottom: 6px; }
+            .timeline-content-card h3 { font-size: 16.5px; margin-bottom: 6px; line-height: 1.35; }
+            .timeline-content-card p { font-size: 13.5px; line-height: 1.6; }
 
-            /* Pricing */
-            .pricing-grid-2 { grid-template-columns: 1fr; gap: 24px; }
-            .pkg-card { padding: 32px 20px; }
-            .pkg-price-amount { font-size: 32px; }
+            /* Pricing / Value Ladder */
+            .pricing-grid-2 { grid-template-columns: 1fr; gap: 20px; }
+            .pkg-card { padding: 28px 18px; border-radius: 20px; }
+            .pkg-pill-badge { font-size: 11px; padding: 5px 12px; margin-bottom: 10px; }
+            .pkg-title { font-size: 26px; margin-bottom: 4px; }
+            .pkg-subtitle { font-size: 13.5px; margin-bottom: 16px; line-height: 1.4; }
+            .pkg-price-amount { font-size: 30px; }
+            .pkg-price-subtext { font-size: 12.5px; margin-bottom: 20px; }
+            .pkg-features-list { gap: 10px; margin-bottom: 24px; }
+            .pkg-features-list li { font-size: 13.5px; line-height: 1.55; padding-left: 28px; }
+            .btn-pkg { padding: 14px; font-size: 14.5px; border-radius: 12px; }
 
-            /* Gallery Slider */
+            /* Experts */
+            .expert-card { border-radius: 20px; }
+            .expert-img-wrap { height: 240px; }
+            .expert-card-body { padding: 20px 16px; }
+            .expert-card-body h3 { font-size: 19px; }
+
+            /* About FinPeace Condensed */
+            .about-condensed-wrapper { padding: 24px 18px; border-radius: 20px; }
+            .stat-num { font-size: 28px; }
+            .stat-lbl { font-size: 12px; }
+
+            /* Event Gallery Slider */
             .slider-slide {
                 flex: 0 0 100%;
                 min-width: 100%;
             }
-            .slider-btn { width: 36px; height: 36px; font-size: 16px; }
+            .slider-btn { width: 34px; height: 34px; font-size: 15px; }
             .slider-btn.btn-prev { left: 4px; }
             .slider-btn.btn-next { right: 4px; }
 
+            /* Lead Form */
+            .form-card { padding: 28px 18px; border-radius: 20px; }
+            .form-group label { font-size: 13px; }
+            .form-control { padding: 12px 14px; font-size: 14px; border-radius: 10px; }
+            .btn-submit-form { padding: 15px; font-size: 15px; border-radius: 12px; }
+
             /* Footer */
-            footer { padding: 48px 0 32px 0; }
-            .footer-grid { gap: 36px; margin-bottom: 30px; }
-            .footer-col-1 p.footer-desc { max-width: 100%; }
+            footer { padding: 44px 0 28px 0; }
+            .footer-grid { gap: 32px; margin-bottom: 28px; }
+            .footer-col-1 p.footer-desc { font-size: 13.5px; max-width: 100%; margin-bottom: 20px; }
+            .footer-heading { font-size: 13px; margin-bottom: 16px; }
+            .footer-contact-info p { font-size: 13.5px; }
+            .social-icon-btn { width: 40px; height: 40px; }
         }
 
         @media (max-width: 480px) {
-            .hero h1 { font-size: 25px; }
-            .btn-cta-hero { width: 100%; text-align: center; }
-            .btn-submit-form { font-size: 15.5px; padding: 16px; }
-            .pkg-price-amount { font-size: 29px; }
+            .hero h1 { font-size: 23px; }
+            .hero-subtitle { font-size: 14px; }
+            .btn-cta-hero { width: 100%; text-align: center; padding: 15px; font-size: 14.5px; }
+            .pkg-price-amount { font-size: 27px; }
+            .section-title { font-size: 21px; }
         }
     </style>
 </head>
