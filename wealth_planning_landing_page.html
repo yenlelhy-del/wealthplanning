@@ -2707,27 +2707,28 @@
             const submitBtn = event.target.querySelector('button[type="submit"]');
             const originalText = submitBtn ? submitBtn.innerText : 'ĐĂNG KÝ TƯ VẤN 1:1';
 
-            const fullname = document.getElementById('leadFullname') ? document.getElementById('leadFullname').value.trim() : '';
-            const phone = document.getElementById('leadPhone') ? document.getElementById('leadPhone').value.trim() : '';
-            const email = document.getElementById('leadEmail') ? document.getElementById('leadEmail').value.trim() : '';
-            const mainNeed = document.getElementById('selectNeed') ? document.getElementById('selectNeed').value : '';
-            const otherNote = document.getElementById('otherNeedText') ? document.getElementById('otherNeedText').value.trim() : '';
-
             if (submitBtn) {
                 submitBtn.innerText = 'ĐANG GỬI THÔNG TIN...';
                 submitBtn.disabled = true;
             }
 
-            const params = new URLSearchParams();
-            params.append('fullname', fullname);
-            params.append('phone', phone);
-            params.append('email', email);
-            params.append('need', finalNeed);
-            params.append('note', otherNote);
-            params.append('sheet', 'WP_new');
-            params.append('timestamp', new Date().toLocaleString('vi-VN'));
-
             try {
+                const fullname = document.getElementById('leadFullname') ? document.getElementById('leadFullname').value.trim() : '';
+                const phone = document.getElementById('leadPhone') ? document.getElementById('leadPhone').value.trim() : '';
+                const email = document.getElementById('leadEmail') ? document.getElementById('leadEmail').value.trim() : '';
+                const mainNeed = document.getElementById('selectNeed') ? document.getElementById('selectNeed').value : '';
+                const otherNote = document.getElementById('otherNeedText') ? document.getElementById('otherNeedText').value.trim() : '';
+                const finalNeed = (mainNeed === 'Khác' && otherNote) ? ('Khác: ' + otherNote) : mainNeed;
+
+                const params = new URLSearchParams();
+                params.append('fullname', fullname);
+                params.append('phone', phone);
+                params.append('email', email);
+                params.append('need', finalNeed);
+                params.append('note', otherNote);
+                params.append('sheet', 'WP_new');
+                params.append('timestamp', new Date().toLocaleString('vi-VN'));
+
                 if (GOOGLE_SCRIPT_WEBAPP_URL) {
                     // Method 1: POST x-www-form-urlencoded
                     fetch(GOOGLE_SCRIPT_WEBAPP_URL, {
@@ -2743,6 +2744,7 @@
                         mode: 'no-cors'
                     }).catch(err => console.log('GET fetch err:', err));
                 }
+
                 alert('Cảm ơn ' + (fullname || 'bạn') + ' đã đăng ký! Chuyên gia FinPeace sẽ liên hệ tư vấn 1:1 cho bạn trong thời gian sớm nhất.');
                 event.target.reset();
                 if (document.getElementById('otherNeedGroup')) {
