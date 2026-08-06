@@ -1171,11 +1171,24 @@
             display: block;
         }
 
-        .expert-info h3 {
+        .tower-detail-box h3 {
             font-size: 22px;
             font-weight: 800;
             color: var(--text-primary);
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+        }
+
+        .tower-detail-subtag {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--brand-green-vivid);
+            letter-spacing: 0.03em;
+            margin-bottom: 14px;
+            display: inline-block;
+            background: var(--brand-green-light);
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 168, 89, 0.2);
         }
 
         .expert-role {
@@ -1905,7 +1918,7 @@
                         Cố vấn lập kế hoạch TCCN & Đầu tư tích sản
                     </div>
                     <h1>
-                        Tối Ưu Nguồn Lực – <span class="green-gradient">An Tâm Tài Sản</span><br>
+                        Tối Ưu Nguồn Lực <span class="green-gradient">An Tâm Tài Sản</span><br>
                         <span class="gold-highlight">Tự Do Thiết Kế Cuộc Sống</span>
                     </h1>
                     <p class="subhead">
@@ -2054,7 +2067,8 @@
                 </div>
 
                 <div class="tower-detail-box" id="towerDetailCard">
-                    <h3 id="towerDetailTitle">TẦNG 1: TẦNG BẢO VỆ (Nền Móng Bắt Buộc)</h3>
+                    <h3 id="towerDetailTitle">TẦNG 1: TẦNG BẢO VỆ</h3>
+                    <div id="towerDetailSubtitle" class="tower-detail-subtag">(Nền Móng Bắt Buộc)</div>
                     <p id="towerDetailDesc">Nền móng bắt buộc của gia đình bạn. Không có tầng này, mọi kế hoạch đầu tư đều giống như xây nhà trên cát trước sóng gió biến cố.</p>
                     <ul id="towerDetailList">
                         <li>Quỹ dự phòng khẩn cấp (6-12 tháng chi tiêu cơ bản)</li>
@@ -2483,7 +2497,8 @@
     <script>
         const towerDetails = {
             1: {
-                title: "TẦNG 1: TẦNG BẢO VỆ (Nền Móng Bắt Buộc)",
+                title: "TẦNG 1: TẦNG BẢO VỆ",
+                subtitle: "(Nền Móng Bắt Buộc)",
                 desc: "Nền móng bắt buộc của gia đình bạn. Không có tầng này, mọi kế hoạch đầu tư đều giống như xây nhà trên cát trước sóng gió biến cố.",
                 items: [
                     "Quỹ dự phòng khẩn cấp (6-12 tháng chi tiêu cơ bản)",
@@ -2492,7 +2507,8 @@
                 ]
             },
             2: {
-                title: "TẦNG 2: TẦNG ƯU TIÊN (Mục Tiêu Thiết Yếu)",
+                title: "TẦNG 2: TẦNG ƯU TIÊN",
+                subtitle: "(Mục Tiêu Thiết Yếu)",
                 desc: "Các mục tiêu thiết yếu của gia đình. Tích sản định kỳ hàng tháng giúp bạn chạm đến từng cột mốc mà không áp lực dòng tiền.",
                 items: [
                     "Quỹ mua nhà / đổi xe",
@@ -2501,7 +2517,8 @@
                 ]
             },
             3: {
-                title: "TẦNG 3: TẦNG NÂNG CAO (Tăng Trưởng & Tự Do)",
+                title: "TẦNG 3: TẦNG NÂNG CAO",
+                subtitle: "(Tăng Trưởng & Tự Do)",
                 desc: "Khi Tầng 1 và Tầng 2 đã kiên cố, tài sản được phân bổ vào các kênh tăng trưởng dài hạn để gia tăng gia sản và độc lập tài chính.",
                 items: [
                     "Quỹ Du lịch, Thừa kế, Từ thiện",
@@ -2517,6 +2534,7 @@
 
             const info = towerDetails[level];
             document.getElementById('towerDetailTitle').innerText = info.title;
+            document.getElementById('towerDetailSubtitle').innerText = info.subtitle;
             document.getElementById('towerDetailDesc').innerText = info.desc;
             
             const listContainer = document.getElementById('towerDetailList');
