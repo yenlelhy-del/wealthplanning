@@ -2700,7 +2700,7 @@
         }
 
         // Google Sheets Integration for Sheet WP_new
-        const GOOGLE_SCRIPT_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbx_FINPEACE_WP_NEW_SCRIPT_ID/exec"; // Replace with your Google Apps Script Web App URL for Sheet WP_new
+        const GOOGLE_SCRIPT_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbwM086UXeUYhHkisE0WeDcl2xnDrMLlJntKCPrJWUTwQGmMWPoh-wDsBYkR-9m8Mck7/exec";
 
         async function handleLeadSubmit(event) {
             event.preventDefault();
@@ -2730,7 +2730,7 @@
             formData.append('timestamp', new Date().toLocaleString('vi-VN'));
 
             try {
-                if (GOOGLE_SCRIPT_WEBAPP_URL && !GOOGLE_SCRIPT_WEBAPP_URL.includes('FINPEACE_WP_NEW_SCRIPT_ID')) {
+                if (GOOGLE_SCRIPT_WEBAPP_URL) {
                     await fetch(GOOGLE_SCRIPT_WEBAPP_URL, {
                         method: 'POST',
                         body: formData,
