@@ -1333,6 +1333,92 @@
             to { opacity: 1; transform: scale(1) translateY(0); }
         }
 
+        /* FAQ Section */
+        .faq-container {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .faq-item {
+            background: #FFFFFF;
+            border: 1px solid var(--border-soft);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0, 77, 39, 0.03);
+            transition: all 0.25s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--border-highlight);
+            box-shadow: 0 8px 24px rgba(0, 168, 89, 0.08);
+        }
+
+        .faq-item.active {
+            border-color: var(--brand-green-vivid);
+            box-shadow: 0 10px 28px rgba(0, 168, 89, 0.12);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            background: transparent;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-primary);
+            cursor: pointer;
+            gap: 16px;
+            font-family: var(--font-main);
+            line-height: 1.45;
+        }
+
+        .faq-icon {
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--brand-green-vivid);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--brand-green-light);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            background: var(--brand-green-vivid);
+            color: #FFFFFF;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+            padding: 0 24px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 350px;
+            padding: 0 24px 22px 24px;
+            transition: max-height 0.35s cubic-bezier(0.5, 0, 0.1, 1), padding 0.3s ease;
+        }
+
+        .faq-answer p {
+            font-size: 15px;
+            line-height: 1.72;
+            color: var(--text-secondary);
+        }
+
         .form-group {
             margin-bottom: 24px;
         }
@@ -1974,6 +2060,12 @@
             .slider-btn.btn-prev { left: 4px !important; }
             .slider-btn.btn-next { right: 4px !important; }
 
+            /* FAQ Section Mobile */
+            .faq-container { width: 100% !important; box-sizing: border-box !important; gap: 10px !important; }
+            .faq-question { font-size: 15px !important; padding: 16px 16px !important; line-height: 1.4 !important; }
+            .faq-answer p { font-size: 14px !important; line-height: 1.65 !important; }
+            .faq-item.active .faq-answer { padding: 0 16px 16px 16px !important; }
+
             /* Lead Form */
             .form-card { padding: 28px 20px !important; border-radius: 22px !important; width: 100% !important; box-sizing: border-box !important; }
             .form-group label { font-size: 13.5px !important; font-weight: 600 !important; }
@@ -2013,6 +2105,7 @@
                 <li><a href="#pricing" onclick="closeMobileMenu()">Gói Dịch Vụ</a></li>
                 <li><a href="#experts" onclick="closeMobileMenu()">Chuyên Gia</a></li>
                 <li><a href="#about" onclick="closeMobileMenu()">Về FinPeace</a></li>
+                <li><a href="#faq" onclick="closeMobileMenu()">FAQ</a></li>
             </ul>
             <div style="display: flex; align-items: center; gap: 10px;">
                 <a href="#register" class="btn-cta-nav">Tư vấn 1:1</a>
@@ -2505,6 +2598,79 @@
         </div>
     </section>
 
+    <!-- FAQ Section (Frequently Asked Questions) -->
+    <section id="faq" class="section-padding container">
+        <div class="section-header" style="text-align: center;">
+            <span class="section-kicker">GIẢI ĐÁP THẮC MẮC</span>
+            <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+            <p style="color: var(--text-muted); font-size: 15.5px; margin-top: 6px; max-width: 680px; margin-left: auto; margin-right: auto;">
+                Mọi thông tin bạn cần biết về dịch vụ Cố vấn Tài chính Cá nhân & Đồng hành Đầu tư Tích sản FinPeace.
+            </p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item active">
+                <button type="button" class="faq-question" onclick="toggleFaq(this)">
+                    <span>1. Dịch vụ Cố vấn Tài chính Cá nhân FinPeace dành cho ai?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Dịch vụ được thiết kế tối ưu cho nhóm Chuyên gia, Quản lý, Chủ doanh nghiệp & Người có thu nhập cao bận rộn. Bạn có dòng tiền tốt nhưng tài sản nằm rải rác, không có thời gian theo dõi thị trường hàng ngày và muốn xây dựng danh mục tích sản an toàn, bền vững dài hạn.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-question" onclick="toggleFaq(this)">
+                    <span>2. FinPeace có cam kết lợi nhuận đầu tư hay không?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>FinPeace là đơn vị Cố vấn Độc lập tuân thủ chuẩn mực tiêu chuẩn quốc tế CFP®. Chúng tôi <strong>KHÔNG lướt sóng rủi ro, KHÔNG hứa hẹn lợi nhuận ảo</strong>. FinPeace tập trung kiểm soát rủi ro, tối ưu hóa dòng tiền và may đo danh mục cổ phiếu tích sản chất lượng cao theo mục tiêu cuộc sống riêng của bạn.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-question" onclick="toggleFaq(this)">
+                    <span>3. Tôi chưa từng đầu tư chứng khoán thì có tham gia được không?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Hoàn toàn được. Chuyên gia FinPeace sẽ đồng hành 1:1, giải thích mọi khái niệm bằng ngôn ngữ đơn giản nhất, hỗ trợ mở tài khoản, thiết lập quy trình tích sản kỷ luật tự động (SIP) và gửi nhắc lịch mua/bán rõ ràng. Bạn không cần đọc biểu đồ kỹ thuật phức tạp.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-question" onclick="toggleFaq(this)">
+                    <span>4. Sự khác biệt giữa gói SEED (Khởi động) và gói GROW (Đồng hành 2 năm)?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Gói <strong>SEED (2,850,000đ)</strong> tập trung rà soát sức khỏe tài chính toàn diện, xuất báo cáo đánh giá & 1 buổi tư vấn 1:1. Gói <strong>GROW (23,850,000đ)</strong> bao gồm trọn bộ lập kế hoạch chuẩn CFP®, 4 buổi tư vấn 1:1 chuyên sâu, khóa học Tinh hoa đầu tư và đặc biệt là <strong>Đồng hành thực chiến 2 năm</strong> (nhắc lịch SIP, theo dõi danh mục, cập nhật KQKD quý & cảnh báo biến động doanh nghiệp).</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-question" onclick="toggleFaq(this)">
+                    <span>5. Quy trình bảo mật thông tin tài chính cá nhân của tôi ra sao?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>100% dữ liệu tài chính, thu nhập và tài sản của bạn được FinPeace bảo mật theo cam kết hợp đồng dịch vụ cố vấn. Thông tin chỉ phục vụ duy nhất cho mục đích chẩn đoán sức khỏe tài chính và lập kế hoạch cho riêng cá nhân & gia đình bạn.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-question" onclick="toggleFaq(this)">
+                    <span>6. Số vốn tối thiểu hàng tháng để bắt đầu Tích sản là bao nhiêu?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Bạn không cần vốn lớn hàng tỷ đồng ngay từ đầu. Tích sản là hành trình kỷ luật hàng tháng trích từ dòng tiền thu nhập dư dả (chỉ từ 5 - 10 triệu đồng/tháng) để đều đặn sở hữu cổ phiếu của các doanh nghiệp đầu ngành uy tín.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Registration Section -->
     <section id="register" class="section-padding container">
         <div class="form-card">
@@ -2886,6 +3052,15 @@
             const modal = document.getElementById('successModal');
             if (modal) {
                 modal.style.display = 'none';
+            }
+        }
+
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+            if (!isActive) {
+                item.classList.add('active');
             }
         }
 
