@@ -18,16 +18,16 @@
             --bg-dark-anchor: #071B11;
             
             --brand-green-deep: #004D27;
-            --brand-green: #006D38;
-            --brand-green-vivid: #00A859;
+            --brand-green: #008746;
+            --brand-green-vivid: #00B058;
             --brand-green-glow: #00E676;
-            --brand-green-gradient: linear-gradient(135deg, #005A2E 0%, #00A859 100%);
-            --brand-green-light: #E6F5EC;
+            --brand-green-gradient: linear-gradient(135deg, #00E676 0%, #00A859 60%, #006D38 100%);
+            --brand-green-light: #E6F7ED;
             
-            --warm-gold: #C5A059;
-            --warm-gold-vivid: #D4AF37;
-            --warm-gold-gradient: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #C5A059 100%);
-            --warm-gold-light: #FFFDF5;
+            --warm-gold: #D4A037;
+            --warm-gold-vivid: #F5AB1D;
+            --warm-gold-gradient: linear-gradient(135deg, #FFDC65 0%, #F5AB1D 50%, #C57B00 100%);
+            --warm-gold-light: #FFFBF0;
             
             --text-primary: #0F1D16;
             --text-secondary: #2C3E35;
@@ -300,19 +300,42 @@
         }
 
         .hero h1 span.green-gradient {
-            background: linear-gradient(135deg, #00BA60 0%, #006D38 100%);
+            background: linear-gradient(135deg, #00E676 0%, #00B058 50%, #007A3E 100%);
+            background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
-            filter: drop-shadow(0 2px 10px rgba(0, 168, 89, 0.2));
+            filter: drop-shadow(0 2px 14px rgba(0, 230, 118, 0.3));
+            animation: shineGradient 5s ease infinite;
         }
 
         .hero h1 span.gold-highlight {
-            color: #B88A1D;
-            background: linear-gradient(180deg, transparent 60%, rgba(212, 175, 55, 0.24) 60%);
+            background: linear-gradient(135deg, #FFDC65 0%, #F5AB1D 50%, #C57B00 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             display: inline-block;
-            padding: 0 6px;
+            filter: drop-shadow(0 2px 12px rgba(245, 171, 29, 0.3));
+            animation: shineGradient 5s ease infinite 2.5s;
+            position: relative;
+        }
+
+        .hero h1 span.gold-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, rgba(255, 220, 101, 0.4) 0%, rgba(245, 171, 29, 0.2) 100%);
             border-radius: 4px;
+            z-index: -1;
+        }
+
+        @keyframes shineGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .hero p.subhead {
