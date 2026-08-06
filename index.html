@@ -2718,24 +2718,30 @@
                 submitBtn.disabled = true;
             }
 
-            const finalNeed = mainNeed === 'Khác' && otherNote ? `Khác: ${otherNote}` : mainNeed;
-
-            const formData = new FormData();
-            formData.append('fullname', fullname);
-            formData.append('phone', phone);
-            formData.append('email', email);
-            formData.append('need', finalNeed);
-            formData.append('note', otherNote);
-            formData.append('sheet', 'WP_new');
-            formData.append('timestamp', new Date().toLocaleString('vi-VN'));
+            const params = new URLSearchParams();
+            params.append('fullname', fullname);
+            params.append('phone', phone);
+            params.append('email', email);
+            params.append('need', finalNeed);
+            params.append('note', otherNote);
+            params.append('sheet', 'WP_new');
+            params.append('timestamp', new Date().toLocaleString('vi-VN'));
 
             try {
                 if (GOOGLE_SCRIPT_WEBAPP_URL) {
-                    await fetch(GOOGLE_SCRIPT_WEBAPP_URL, {
+                    // Method 1: POST x-www-form-urlencoded
+                    fetch(GOOGLE_SCRIPT_WEBAPP_URL, {
                         method: 'POST',
-                        body: formData,
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: params
+                    }).catch(err => console.log('POST fetch err:', err));
+
+                    // Method 2: GET query parameter fallback
+                    fetch(GOOGLE_SCRIPT_WEBAPP_URL + '?' + params.toString(), {
+                        method: 'GET',
                         mode: 'no-cors'
-                    });
+                    }).catch(err => console.log('GET fetch err:', err));
                 }
                 alert('Cảm ơn ' + (fullname || 'bạn') + ' đã đăng ký! Chuyên gia FinPeace sẽ liên hệ tư vấn 1:1 cho bạn trong thời gian sớm nhất.');
                 event.target.reset();
