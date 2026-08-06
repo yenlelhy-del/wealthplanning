@@ -2267,12 +2267,16 @@
                 </div>
                 <div class="form-group">
                     <label>Nhu cầu ưu tiên của bạn?</label>
-                    <select class="form-control">
-                        <option>Sắp xếp lại tài sản nằm rải rác</option>
-                        <option>Tích sản an toàn & bền vững dài hạn</option>
-                        <option>Chuẩn bị cho mục tiêu Tự do tài chính / Hưu trí</option>
-                        <option>Khác</option>
+                    <select class="form-control" id="selectNeed" onchange="toggleOtherNeed(this.value)">
+                        <option value="Sắp xếp lại tài sản nằm rải rác">Sắp xếp lại tài sản nằm rải rác</option>
+                        <option value="Tích sản an toàn & bền vững dài hạn">Tích sản an toàn & bền vững dài hạn</option>
+                        <option value="Chuẩn bị cho mục tiêu Tự do tài chính / Hưu trí">Chuẩn bị cho mục tiêu Tự do tài chính / Hưu trí</option>
+                        <option value="Khác">Khác</option>
                     </select>
+                </div>
+                <div class="form-group" id="otherNeedGroup" style="display: none; margin-top: 14px;">
+                    <label>Chia sẻ thêm nhu cầu của bạn</label>
+                    <textarea class="form-control" id="otherNeedText" rows="3" placeholder="Nhập nhu cầu hoặc câu hỏi cụ thể của bạn để chuyên gia FinPeace hỗ trợ tốt nhất..."></textarea>
                 </div>
 
                 <button type="submit" class="btn-submit-form">GỬI THÔNG TIN – NHẬN TƯ VẤN 1:1</button>
@@ -2480,6 +2484,19 @@
                 startAutoplay();
             }, 100);
         })();
+
+        function toggleOtherNeed(val) {
+            const group = document.getElementById('otherNeedGroup');
+            const txt = document.getElementById('otherNeedText');
+            if (group) {
+                if (val === 'Khác') {
+                    group.style.display = 'block';
+                    if (txt) txt.focus();
+                } else {
+                    group.style.display = 'none';
+                }
+            }
+        }
     </script>
 </body>
 </html>
